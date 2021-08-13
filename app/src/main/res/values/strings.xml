@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">To do list</string>
     <string name="txt_tv_title">Tarefas</string>
+    <string name="txt_hint_titulo">Titulo</string>
+    <string name="txt_hint_descrição">Descrição</string>
+    <string name="txt_hint_data">Data</string>
+    <string name="txt_hint_hora">Hora</string>
+    <string name="txt_btn_cancelar">Cancelar</string>
+    <string name="txt_btn_add_task">Criar Tarefa</string>
 </resources>
