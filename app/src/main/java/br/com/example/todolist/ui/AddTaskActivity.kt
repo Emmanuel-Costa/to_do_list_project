@@ -64,6 +64,7 @@ class AddTaskActivity : AppCompatActivity() {
 
             )
             TaskDataSource.insertTask(task)
+            finish()
         }
     }
 }

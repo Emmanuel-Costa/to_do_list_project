@@ -7,4 +7,5 @@
     <string name="txt_hint_hora">Hora</string>
     <string name="txt_btn_cancelar">Cancelar</string>
     <string name="txt_btn_add_task">Criar Tarefa</string>
+    <string name="txt_new_task_button_description">Nova Tarefa</string>
 </resources>
