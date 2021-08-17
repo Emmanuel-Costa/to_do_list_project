@@ -8,4 +8,6 @@
     <string name="txt_btn_cancelar">Cancelar</string>
     <string name="txt_btn_add_task">Criar Tarefa</string>
     <string name="txt_new_task_button_description">Nova Tarefa</string>
+    <string name="txt_edit_pop_up">Editar</string>
+    <string name="txt_delete_pop_up">Deletar</string>
 </resources>

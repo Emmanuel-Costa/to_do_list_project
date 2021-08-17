@@ -1,5 +1,6 @@
 package br.com.example.todolist.ui
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.example.todolist.databinding.ActivityAddTaskBinding
@@ -64,6 +65,8 @@ class AddTaskActivity : AppCompatActivity() {
 
             )
             TaskDataSource.insertTask(task)
+
+            setResult(Activity.RESULT_OK)
             finish()
         }
     }
