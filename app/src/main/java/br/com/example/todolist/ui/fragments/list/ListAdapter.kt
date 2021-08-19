@@ -1,4 +1,4 @@
-package br.com.example.todolist.ui
+package br.com.example.todolist.ui.fragments.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,10 +7,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.example.todolist.R
 import br.com.example.todolist.data.model.Task
-import br.com.example.todolist.ui.fragments.list.ListFragmentDirections
 import kotlinx.android.synthetic.main.custom_row.view.*
 
-class ListAdapter : RecyclerView.Adapter<ListAdapter.ListAdapterViewHolder>() {
+class ListAdapter : RecyclerView.Adapter<ListAdapter.ListAdapterViewHolder>()  {
     private var taskList = emptyList<Task>()
 
     class ListAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

@@ -1,58 +1,24 @@
 package br.com.example.todolist.ui
 
-import android.app.Activity
-import android.content.Intent
-import android.content.ServiceConnection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.example.todolist.databinding.ActivityMainBinding
-import br.com.example.todolist.datasource.TaskDataSource
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import br.com.example.todolist.R
+
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityMainBinding
-    private val adapter by lazy { TaskListAdapter() }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_main)
 
-        binding.rvTasks.adapter = adapter
-        updateList()
+        setupActionBarWithNavController(findNavController(R.id.fragment))
 
-        insertListeners()
     }
 
-    private fun insertListeners() {
-        binding.fab.setOnClickListener {
-            startActivityForResult(Intent(this, AddTaskActivity::class.java), CREATE_NEW_TASK)
-        }
-
-        adapter.listenerEdit = {
-            val intent = Intent(this, AddTaskActivity::class.java)
-            intent.putExtra(AddTaskActivity.TASK_ID, it.id)
-            startActivityForResult(intent, CREATE_NEW_TASK)
-        }
-
-        adapter.listenerDelete = {
-            TaskDataSource.deleteTask(it)
-            updateList()
-        }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) {
-            updateList()
-        }
-    }
-
-    private fun updateList() {
-        adapter.submitList(TaskDataSource.getList())
-    }
-
-    companion object {
-        private const val CREATE_NEW_TASK = 1000
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.fragment)
+        return navController.navigateUp()|| super.onSupportNavigateUp()
     }
 }

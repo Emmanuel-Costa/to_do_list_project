@@ -1,13 +1,36 @@
 <resources>
     <string name="app_name">To do list</string>
+    <string name="txt_toolbar_title">Lista de Tarefas</string>
     <string name="txt_tv_title">Tarefas</string>
+    <string name="toolbar_title">Adicionar tarefa</string>
+    <string name="fragment_add_til_description_hint">descrição</string>
     <string name="txt_hint_titulo">Titulo</string>
     <string name="txt_hint_descrição">Descrição</string>
+    <string name="list_dialog_title">Deletar todas as tarefas?</string>
+    <string name="list_dialog_message">Tem certeza que quer deletar tudo?</string>
+    <string name="list_dialog_cancel">Cancel</string>
+    <string name="delete_dialog_title">Deletar tarefa?</string>
+    <string name="delete_dialog_message">Tem certeza que quer deletar?</string>
+    <string name="list_dialog_no">Não</string>
+    <string name="list_dialog_yes">Sim</string>
+    <string name="list_toast_removed">Removido com sucesso</string>
+    <string name="update_toast">Atualizado com sucesso!</string>
+    <string name="update_toast_removed">Removido com sucesso!</string>
+    <string name="update_title">Atualizar</string>
     <string name="txt_hint_data">Data</string>
     <string name="txt_hint_hora">Hora</string>
+    <string name="tv_title_text">Titulo da tarefa</string>
+    <string name="tv_description_text">Descrição da tarefa</string>
+    <string name="iv_cd">Detalhes</string>
+    <string name="iv_cd_empty_state">Empty State</string>
+    <string name="empty_state_title_text">Você não possui nenhuma tarefa!</string>
+    <string name="add_cd">Add Task</string>
     <string name="txt_btn_cancelar">Cancelar</string>
     <string name="txt_btn_add_task">Criar Tarefa</string>
     <string name="txt_new_task_button_description">Nova Tarefa</string>
     <string name="txt_edit_pop_up">Editar</string>
     <string name="txt_delete_pop_up">Deletar</string>
+    <string name="txt_toast_btn_add">Adicionado com sucesso!</string>
+    <string name="txt_toast_inputcheckerror">Por favor, preencha todos os campos!</string>
+    <string name="menu_delete_title">Deletar!</string>
 </resources>

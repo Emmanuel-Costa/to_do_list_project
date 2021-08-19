@@ -1,20 +1,21 @@
-package br.com.example.todolist.ui
+package br.com.example.todolist.ui.fragments.add
 
 import android.os.Bundle
 import android.text.TextUtils
 import android.text.format.DateFormat.is24HourFormat
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import br.com.example.todolist.R
-import br.com.example.todolist.extensions.format
 import br.com.example.todolist.data.model.Task
+import br.com.example.todolist.extensions.format
+import br.com.example.todolist.ui.TaskViewModel
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
@@ -22,7 +23,7 @@ import kotlinx.android.synthetic.main.activity_add_task.*
 import kotlinx.android.synthetic.main.activity_add_task.view.*
 import java.util.*
 
-class AddTaskActivity : Fragment() {
+class AddFragment : Fragment() {
 
     private lateinit var mTaskViewModel: TaskViewModel
 
@@ -130,5 +131,6 @@ class AddTaskActivity : Fragment() {
             date
         ) || TextUtils.isEmpty(hour))
     }
+
 
 }
