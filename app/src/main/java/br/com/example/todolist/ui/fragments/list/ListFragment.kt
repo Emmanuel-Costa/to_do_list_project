@@ -28,7 +28,7 @@ class ListFragment : Fragment() {
         val recyclerView = view.rv
         recyclerView.adapter = adapter
         recyclerView.layoutManager = StaggeredGridLayoutManager(
-            2,
+            1,
             StaggeredGridLayoutManager.VERTICAL
         )
 
